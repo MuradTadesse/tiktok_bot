@@ -1028,6 +1028,9 @@ async def main() -> None:
         # Set up the application
         application = await tiktok_report_bot.init_application()
         
+        # Delete any existing webhook before starting polling
+        await application.bot.delete_webhook()
+        
         # Start the campaign reminder service
         tiktok_report_bot.campaign_manager.start_reminder_service()
         
