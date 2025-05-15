@@ -1,0 +1,275 @@
+/* Advanced animations file for the TikTok Report Helper webapp
+ * Created by Murad Tadesse
+ * Modern, premium animations for a professional user experience
+ */
+
+/* Fade in animations with different directions */
+[data-animation="fade-in"] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-animation="fade-in"].animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-animation="fade-in-up"] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-animation="fade-in-up"].animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-animation="fade-in-down"] {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-animation="fade-in-down"].animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-animation="fade-in-left"] {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-animation="fade-in-left"].animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-animation="fade-in-right"] {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-animation="fade-in-right"].animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Zoom animations */
+[data-animation="zoom-in"] {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-animation="zoom-in"].animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+[data-animation="zoom-out"] {
+  opacity: 0;
+  transform: scale(1.1);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-animation="zoom-out"].animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Premium highlight pulse animation */
+.highlight-pulse {
+  animation: highlightPulse 1.5s ease-out;
+}
+
+@keyframes highlightPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(var(--tg-theme-button-color-rgb, 43, 90, 237), 0.3);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(var(--tg-theme-button-color-rgb, 43, 90, 237), 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(var(--tg-theme-button-color-rgb, 43, 90, 237), 0);
+  }
+}
+
+/* Sliding animations */
+[data-animation="slide-up"] {
+  transform: translateY(100%);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-animation="slide-up"].animate {
+  transform: translateY(0);
+}
+
+[data-animation="slide-down"] {
+  transform: translateY(-100%);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-animation="slide-down"].animate {
+  transform: translateY(0);
+}
+
+[data-animation="slide-left"] {
+  transform: translateX(100%);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-animation="slide-left"].animate {
+  transform: translateX(0);
+}
+
+[data-animation="slide-right"] {
+  transform: translateX(-100%);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-animation="slide-right"].animate {
+  transform: translateX(0);
+}
+
+/* High-end staggered reveal animations */
+.stagger-reveal > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.stagger-reveal.animate > *:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.stagger-reveal.animate > *:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.stagger-reveal.animate > *:nth-child(3) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.stagger-reveal.animate > *:nth-child(4) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.stagger-reveal.animate > *:nth-child(5) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+.stagger-reveal.animate > *:nth-child(n+6) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+
+/* Typing animation (Text appears like being typed) */
+.typed-text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--tg-theme-button-color, var(--primary));
+  width: 0;
+  animation: typing 2s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--tg-theme-button-color, var(--primary)) }
+}
+
+/* Subtle hover animations */
+.hover-float {
+  transition: transform 0.3s ease;
+}
+
+.hover-float:hover {
+  transform: translateY(-5px);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 15px rgba(var(--tg-theme-button-color-rgb, 43, 90, 237), 0.5);
+}
+
+/* Confetti animation for celebration */
+@keyframes confettiDrop {
+  0% {
+    opacity: 1;
+    transform: translateY(-100vh) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh) rotate(720deg);
+  }
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary);
+  animation: confettiDrop 4s ease-out forwards;
+  z-index: 9999;
+}
+
+/* Advanced loading states */
+.shimmer-loader {
+  background: linear-gradient(90deg, 
+    rgba(var(--tg-theme-hint-color-rgb, 108, 117, 125), 0.1) 0%, 
+    rgba(var(--tg-theme-hint-color-rgb, 108, 117, 125), 0.2) 20%, 
+    rgba(var(--tg-theme-hint-color-rgb, 108, 117, 125), 0.1) 40%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
+  border-radius: var(--border-radius-sm);
+  height: 1.5rem;
+  width: 100%;
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+/* Motion-reduced preferences */
+@media (prefers-reduced-motion) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

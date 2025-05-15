@@ -1,0 +1,6 @@
+2025-05-15 04:50:49,451 - TikTokReportBot - INFO - Starting TikTok Report Bot...
+2025-05-15 04:50:58,256 - TikTokReportBot - ERROR - Missing dependencies: python-telegram-bot, python-dotenv, pillow, opencv-python
+2025-05-15 04:50:58,256 - TikTokReportBot - ERROR - Please install them using: pip install -r requirements.txt
+2025-05-15 04:59:56,317 - TikTokReportBot - INFO - Starting TikTok Report Bot...
+2025-05-15 05:00:01,036 - TikTokReportBot - ERROR - Missing dependencies: python-telegram-bot
+2025-05-15 05:00:01,036 - TikTokReportBot - ERROR - Please install them using: pip install -r requirements.txt

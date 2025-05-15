@@ -1,0 +1,311 @@
+/* 
+ * Responsive styles for TikTok Report Helper
+ * Created by Murad Tadesse
+ * Provides optimal viewing experience across a wide range of devices
+ */
+
+/* Base responsive utilities */
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .container {
+    padding: 0 0.75rem;
+  }
+  
+  .card {
+    padding: 1.25rem;
+  }
+  
+  .progress-step {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.75rem;
+  }
+  
+  .progress-label {
+    font-size: 0.7rem;
+    width: 3rem;
+    margin-left: -0.75rem;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.95rem;
+  }
+  
+  .step-image-container {
+    margin: 1rem 0;
+  }
+  
+  .step-image-caption {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .header-title {
+    font-size: 1.1rem;
+  }
+  
+  .btn-group {
+    gap: 0.5rem;
+  }
+  
+  .target-card {
+    padding: 1.25rem;
+  }
+  
+  .target-card-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+  
+  .target-card-username {
+    font-size: 1rem;
+  }
+  
+  .completion-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .completion-title {
+    font-size: 1.25rem;
+  }
+  
+  .d-xs-none {
+    display: none !important;
+  }
+  
+  .d-xs-block {
+    display: block !important;
+  }
+  
+  .d-xs-flex {
+    display: flex !important;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .d-sm-none {
+    display: none !important;
+  }
+  
+  .d-sm-block {
+    display: block !important;
+  }
+  
+  .d-sm-flex {
+    display: flex !important;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    max-width: 720px;
+  }
+  
+  .card {
+    padding: 1.75rem;
+  }
+  
+  .btn-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .btn-group .btn {
+    flex: 1;
+    min-width: 180px;
+  }
+  
+  .d-md-none {
+    display: none !important;
+  }
+  
+  .d-md-block {
+    display: block !important;
+  }
+  
+  .d-md-flex {
+    display: flex !important;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  
+  .btn-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .btn-group .btn {
+    flex: 1;
+  }
+  
+  /* Enhanced animations for larger screens */
+  .card {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn {
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+                background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px) scale(1.01);
+  }
+  
+  .step-image-container {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .step-image-container:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .d-lg-none {
+    display: none !important;
+  }
+  
+  .d-lg-block {
+    display: block !important;
+  }
+  
+  .d-lg-flex {
+    display: flex !important;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  
+  .d-xl-none {
+    display: none !important;
+  }
+  
+  .d-xl-block {
+    display: block !important;
+  }
+  
+  .d-xl-flex {
+    display: flex !important;
+  }
+}
+
+/* Telegram WebApp specific adjustments */
+@media (max-width: 480px) {
+  /* Adjustments for mobile Telegram clients */
+  body {
+    overflow-x: hidden;
+  }
+  
+  .header {
+    padding: 0.75rem 0;
+  }
+  
+  .progress-container {
+    margin: 1rem 0;
+  }
+  
+  .card {
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .step-image-container {
+    border-radius: var(--border-radius-sm);
+    margin: 0.75rem 0;
+  }
+  
+  .step-image {
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .target-card {
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .btn {
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .completion-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background-color: #fff !important;
+    color: #000 !important;
+  }
+  
+  .header, .btn-group, .progress-container {
+    display: none !important;
+  }
+  
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+    page-break-inside: avoid;
+  }
+  
+  .step-image-container {
+    max-width: 80% !important;
+    margin: 1rem auto !important;
+  }
+  
+  .step-image {
+    max-width: 100% !important;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+}

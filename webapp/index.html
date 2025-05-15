@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TikTok Report Helper - A professional tool to report harmful TikTok accounts">
+    <meta name="author" content="Murad Tadesse">
+    <title>TikTok Report Helper | Professional Reporting Solution</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- Telegram WebApp API -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="webapp-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-inner">
+                    <div class="header-title">
+                        <span class="logo-icon">🛡️</span> TikTok Report Helper
+                    </div>
+                    <div class="header-controls">
+                        <button id="theme-toggle" class="btn btn-icon-only btn-secondary" aria-label="Toggle theme">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M12.3 22h-.1a10.3 10.3 0 0 1-7.3-3.6A10.1 10.1 0 0 1 2 11a10.3 10.3 0 0 1 3.6-7.3A10.1 10.1 0 0 1 12 2h.1a1 1 0 0 1 .7.3 1 1 0 0 1 .3.7 5 5 0 0 0 .9 2.8 5.3 5.3 0 0 0 2.3 1.9 5 5 0 0 0 2.8.9 1 1 0 0 1 1 1 10.3 10.3 0 0 1-3.6 7.3A10.1 10.1 0 0 1 12.3 22zm-1.9-18a8.2 8.2 0 0 0-5.4 2.3A8.2 8.2 0 0 0 4 16.9a8.2 8.2 0 0 0 2.3 4.9 8.2 8.2 0 0 0 5.5 2.2h.5a8.2 8.2 0 0 0 5.3-3.5 8.2 8.2 0 0 0 2.2-5.8 7 7 0 0 1-7-7 8.2 8.2 0 0 0-2.4 1.3z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="container">
+            <!-- Progress indicator -->
+            <div class="progress-container" data-animation="fade-in" data-delay="0.3">
+                <div class="progress-steps">
+                    <div class="progress-step">1</div>
+                    <div class="progress-step">2</div>
+                    <div class="progress-step">3</div>
+                    <div class="progress-step">4</div>
+                    <div class="progress-step">5</div>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="progress-labels">
+                    <div class="progress-label">Start</div>
+                    <div class="progress-label">Profile</div>
+                    <div class="progress-label">Menu</div>
+                    <div class="progress-label">Report</div>
+                    <div class="progress-label">Complete</div>
+                </div>
+            </div>
+            
+            <!-- Step 1: Introduction -->
+            <div class="step" id="step-1">
+                <div class="card" data-animation="fade-in" data-delay="0.5">
+                    <div class="card-title" data-typewriter data-typewriter-speed="40" data-typewriter-delay="0.8">
+                        Report TikTok Account
+                    </div>
+                    
+                    <div class="target-card" data-animation="fade-in" data-delay="1.2">
+                        <div class="target-card-content">
+                            <div class="target-card-header">
+                                <div class="target-card-avatar">
+                                    <span class="target-avatar-text">E</span>
+                                </div>
+                                <div class="target-card-info">
+                                    <div class="target-card-username">
+                                        <span data-target="account">@effoyyt</span>
+                                    </div>
+                                    <div class="target-card-reason">
+                                        <span class="badge badge-danger">
+                                            <span data-target="reason">Hate speech and hateful behaviors</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="target-card-detail">
+                                <span data-target="description">This account consistently posts content containing hate speech targeting ethnic groups.</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-content" data-animation="fade-in" data-delay="1.5">
+                        <p>This guided process will help you report a TikTok account that violates community guidelines. The process takes about 1 minute to complete.</p>
+                        <p>You'll be guided through each step with clear instructions and visual aids.</p>
+                    </div>
+                    
+                    <div class="btn-group" data-animation="fade-in" data-delay="1.8">
+                        <button class="btn btn-block" data-action="next">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/>
+                            </svg>
+                            Begin Reporting Process
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 2: Open TikTok -->
+            <div class="step" id="step-2">
+                <div class="card" data-animation="fade-in">
+                    <div class="card-title">Step 1: Open TikTok Profile</div>
+                    
+                    <div class="step-content">
+                        <p>Click the button below to open the TikTok profile in a new window. Don't close this window - you'll return here after viewing the profile.</p>
+                        
+                        <div class="step-image-container" data-animation="fade-in" data-delay="0.3">
+                            <img class="step-image" src="assets/img/tiktok-profile.jpg" alt="TikTok profile example">
+                            <div class="step-image-caption">Example TikTok profile page</div>
+                        </div>
+                        
+                        <p><strong>Important:</strong> Keep this page open while you report the account on TikTok!</p>
+                    </div>
+                    
+                    <div class="btn-group" data-animation="fade-in" data-delay="0.5">
+                        <a class="btn btn-block" href="#" data-href="tiktok" target="_blank">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                            </svg>
+                            Open TikTok Profile
+                        </a>
+                        <button class="btn btn-block btn-secondary" data-action="next">
+                            I've Opened The Profile
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 3: Locate Report Button -->
+            <div class="step" id="step-3">
+                <div class="card" data-animation="fade-in">
+                    <div class="card-title">Step 2: Locate the Report Option</div>
+                    
+                    <div class="step-content">
+                        <p>On the TikTok profile page, look for the options menu:</p>
+                        
+                        <ol>
+                            <li>Find the three dots (<strong>⋯</strong>) in the top right corner of the profile</li>
+                            <li>Tap this button to open the options menu</li>
+                        </ol>
+                        
+                        <div class="carousel" data-animation="fade-in" data-delay="0.3">
+                            <div class="carousel-container">
+                                <div class="carousel-slide">
+                                    <div class="step-image-container">
+                                        <img class="step-image" src="assets/img/tiktok-menu-dots.jpg" alt="Locate three dots menu">
+                                        <div class="highlight-circle" style="top: 22px; right: 25px;"></div>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <div class="step-image-container">
+                                        <img class="step-image" src="assets/img/tiktok-menu-expanded.jpg" alt="Expanded menu options">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-controls">
+                                <button class="carousel-prev">
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                                    </svg>
+                                </button>
+                                <div class="carousel-dots"></div>
+                                <button class="carousel-next">
+                                    <svg class="icon" viewBox="0 0 24 24">
+                                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="btn-group" data-animation="fade-in" data-delay="0.5">
+                        <button class="btn btn-block" data-action="next">
+                            I Found the Menu
+                        </button>
+                        <button class="btn btn-block btn-secondary" data-action="back">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                            </svg>
+                            Back
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 4: Select Report -->
+            <div class="step" id="step-4">
+                <div class="card" data-animation="fade-in">
+                    <div class="card-title">Step 3: Select 'Report'</div>
+                    
+                    <div class="step-content">
+                        <p>From the menu that appears:</p>
+                        
+                        <ol>
+                            <li>Scroll down if needed</li>
+                            <li>Find and tap on the "<strong>Report</strong>" option</li>
+                        </ol>
+                        
+                        <div class="step-image-container" data-animation="fade-in" data-delay="0.3">
+                            <img class="step-image" src="assets/img/tiktok-report-option.jpg" alt="Select Report option">
+                            <div class="highlight-circle" style="top: 250px; right: 100px;"></div>
+                        </div>
+                        
+                        <p>If you don't see the Report option, try scrolling down in the menu or look for "More options".</p>
+                    </div>
+                    
+                    <div class="btn-group" data-animation="fade-in" data-delay="0.5">
+                        <button class="btn btn-block" data-action="next">
+                            I Selected 'Report'
+                        </button>
+                        <button class="btn btn-block btn-secondary" data-action="back">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                            </svg>
+                            Back
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 5: Select Reason -->
+            <div class="step" id="step-5">
+                <div class="card" data-animation="fade-in">
+                    <div class="card-title">Step 4: Select Report Reason</div>
+                    
+                    <div class="step-content">
+                        <p>When prompted for a reason to report this account:</p>
+                        
+                        <ol>
+                            <li>Select "<strong><span data-target="reason">Hate Speech</span></strong>"</li>
+                            <li>Follow any additional prompts that TikTok provides</li>
+                            <li>If asked for details, use the text below:</li>
+                        </ol>
+                        
+                        <div class="copy-block" data-animation="fade-in" data-delay="0.3">
+                            <div class="copy-content" data-target="description">This account consistently posts content containing hate speech targeting ethnic groups.</div>
+                            <button class="copy-btn">
+                                <svg class="icon" viewBox="0 0 24 24" style="width: 1rem; height: 1rem;">
+                                    <path d="M16 1H4C2.9 1 2 1.9 2 3v14h2V3h12V1zm3 4H8C6.9 5 6 5.9 6 7v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                                </svg>
+                                <span class="tooltip">Copy to clipboard</span>
+                            </button>
+                        </div>
+                        
+                        <p>After completing the reporting process on TikTok, return to this window.</p>
+                    </div>
+                    
+                    <div class="btn-group" data-animation="fade-in" data-delay="0.5">
+                        <button class="btn btn-block btn-success" data-action="next">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                            </svg>
+                            I've Completed the Report
+                        </button>
+                        <button class="btn btn-block btn-secondary" data-action="back">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                            </svg>
+                            Back
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 6: Completion -->
+            <div class="step" id="step-6">
+                <div class="card completion-card" data-animation="fade-in">
+                    <div class="completion-icon">
+                        <svg class="icon" viewBox="0 0 24 24" style="width: 4rem; height: 4rem;">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8-1.41-1.42z" fill="#00c853"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="completion-title" data-animation="fade-in" data-delay="0.5">
+                        Report Submitted Successfully!
+                    </div>
+                    
+                    <div class="completion-subtitle" data-animation="fade-in" data-delay="0.7">
+                        Thank you for helping make TikTok safer for everyone
+                    </div>
+                    
+                    <div class="target-card" data-animation="fade-in" data-delay="0.9">
+                        <div class="target-card-content">
+                            <div class="target-card-header">
+                                <div class="target-card-avatar">
+                                    <span class="target-avatar-text">E</span>
+                                </div>
+                                <div class="target-card-info">
+                                    <div class="target-card-username">
+                                        <span data-target="account">@effoyyt</span>
+                                    </div>
+                                    <div class="target-card-reason">
+                                        <span class="badge badge-success">Reported Successfully</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="btn-group" data-animation="fade-in" data-delay="1.2">
+                        <button class="btn btn-block btn-success" data-action="complete">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                            </svg>
+                            Complete & Return to Bot
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/carousel.js"></script>
+</body>
+</html>
